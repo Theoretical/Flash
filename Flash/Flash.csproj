@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1AB9C69-3E8F-4FA4-AF4D-632D39E8D309}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Flash</RootNamespace>
+    <AssemblyName>Flash</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Summoning\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Log.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Riot\Client.cs" />
+    <Compile Include="Riot\Game.cs" />
+    <Compile Include="Riot\Inventory.cs" />
+    <Compile Include="Riot\leagues\kudos\PendingKudosDTO.cs" />
+    <Compile Include="Riot\leagues\LeagueItemDTO.cs" />
+    <Compile Include="Riot\leagues\LeagueListDTO.cs" />
+    <Compile Include="Riot\leagues\MiniSeriesDTO.cs" />
+    <Compile Include="Riot\Login.cs" />
+    <Compile Include="Riot\Matchmaking.cs" />
+    <Compile Include="Riot\platform\account\AccountSummary.cs" />
+    <Compile Include="Riot\platform\broadcast\BroadcastNotification.cs" />
+    <Compile Include="Riot\platform\catalog\champion\ChampionDTO.cs" />
+    <Compile Include="Riot\platform\catalog\champion\ChampionSkinDTO.cs" />
+    <Compile Include="Riot\platform\catalog\RuneType.cs" />
+    <Compile Include="Riot\platform\clientfacade\LoginDataPacket.cs" />
+    <Compile Include="Riot\platform\client\SummonerLeaguesDTO.cs" />
+    <Compile Include="Riot\platform\gameinvite\Invitee.cs" />
+    <Compile Include="Riot\platform\gameinvite\Inviter.cs" />
+    <Compile Include="Riot\platform\gameinvite\LobbyStatus.cs" />
+    <Compile Include="Riot\platform\gameinvite\Member.cs" />
+    <Compile Include="Riot\platform\gameinvite\Player.cs" />
+    <Compile Include="Riot\platform\game\BannedChampion.cs" />
+    <Compile Include="Riot\platform\game\GameDTO.cs" />
+    <Compile Include="Riot\platform\game\GameMap.cs" />
+    <Compile Include="Riot\platform\game\GameObserver.cs" />
+    <Compile Include="Riot\platform\game\GameTypeConfigDTO.cs" />
+    <Compile Include="Riot\platform\game\Participant.cs" />
+    <Compile Include="Riot\platform\game\PlatformGameLifecycleDTO.cs" />
+    <Compile Include="Riot\platform\game\PlayerChampionSelectionDTO.cs" />
+    <Compile Include="Riot\platform\game\PlayerCredentialsDto.cs" />
+    <Compile Include="Riot\platform\game\PlayerParticipant.cs" />
+    <Compile Include="Riot\platform\game\PracticeGameConfig.cs" />
+    <Compile Include="Riot\platform\game\PracticeGameSearchResult.cs" />
+    <Compile Include="Riot\platform\login\AuthenticationCredentials.cs" />
+    <Compile Include="Riot\platform\login\Session.cs" />
+    <Compile Include="Riot\platform\matchmaking\GameQueueConfig.cs" />
+    <Compile Include="Riot\platform\gameinvite\InvitationRequest.cs" />
+    <Compile Include="Riot\platform\matchmaking\MatchingThrottleConfig.cs" />
+    <Compile Include="Riot\platform\matchmaking\MatchMakerParams.cs" />
+    <Compile Include="Riot\platform\matchmaking\QueueDodger.cs" />
+    <Compile Include="Riot\platform\matchmaking\QueueInfo.cs" />
+    <Compile Include="Riot\platform\matchmaking\SearchingForMatchNotification.cs" />
+    <Compile Include="Riot\platform\statistics\AggregatedStat.cs" />
+    <Compile Include="Riot\platform\statistics\AggregatedStats.cs" />
+    <Compile Include="Riot\platform\statistics\AggregatedStatsKey.cs" />
+    <Compile Include="Riot\platform\statistics\EndOfGameStats.cs" />
+    <Compile Include="Riot\platform\statistics\PlayerParticipantStatsSummary.cs" />
+    <Compile Include="Riot\platform\statistics\PlayerStatSummaries.cs" />
+    <Compile Include="Riot\platform\statistics\PlayerStatSummary.cs" />
+    <Compile Include="Riot\platform\statistics\RawStatDTO.cs" />
+    <Compile Include="Riot\platform\statistics\SummaryAggStats.cs" />
+    <Compile Include="Riot\platform\statistics\SummaryArggStat.cs" />
+    <Compile Include="Riot\platform\summoner\AllSummonerData.cs" />
+    <Compile Include="Riot\platform\summoner\boost\SummonerActiveBoostsDTO.cs" />
+    <Compile Include="Riot\platform\summoner\maserybook\MasteryBookDTO.cs" />
+    <Compile Include="Riot\platform\summoner\maserybook\MasteryBookPageDTO.cs" />
+    <Compile Include="Riot\platform\summoner\maserybook\TalentEntry.cs" />
+    <Compile Include="Riot\platform\summoner\PublicSummoner.cs" />
+    <Compile Include="Riot\platform\summoner\RuneSlot.cs" />
+    <Compile Include="Riot\platform\summoner\spellbook\SepllBookDTO.cs" />
+    <Compile Include="Riot\platform\summoner\spellbook\SpellBookPageDTO.cs" />
+    <Compile Include="Riot\platform\summoner\spellbook\SpellEntry.cs" />
+    <Compile Include="Riot\platform\summoner\Summoner.cs" />
+    <Compile Include="Riot\platform\summoner\SummonerCatalog.cs" />
+    <Compile Include="Riot\platform\summoner\SummonerDefaultSpells.cs" />
+    <Compile Include="Riot\platform\summoner\SummonerLevel.cs" />
+    <Compile Include="Riot\platform\summoner\SummonerLevelAndPoints.cs" />
+    <Compile Include="Riot\platform\summoner\SummonerTalentsAndPoints.cs" />
+    <Compile Include="Riot\platform\summoner\Talent.cs" />
+    <Compile Include="Riot\platform\summoner\TalentGroup.cs" />
+    <Compile Include="Riot\platform\summoner\TalentRow.cs" />
+    <Compile Include="Riot\platform\systemstate\ClientSystemStatesNotifcation.cs" />
+    <Compile Include="Riot\Region\BaseRegion.cs" />
+    <Compile Include="Riot\Region\BR.cs" />
+    <Compile Include="Riot\Region\EU.cs" />
+    <Compile Include="Riot\Region\EUNE.cs" />
+    <Compile Include="Riot\Region\NA.cs" />
+    <Compile Include="Riot\Region\RU.cs" />
+    <Compile Include="Riot\Region\TU.cs" />
+    <Compile Include="Riot\Statistics.cs" />
+    <Compile Include="Riot\Summoner.cs" />
+    <Compile Include="Riot\team\TeamId.cs" />
+    <Compile Include="Riot\team\TeamInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\rtmp-sharp\rtmp-sharp.csproj">
+      <Project>{aa1a4f5d-3bd4-4832-9f5d-90727007727e}</Project>
+      <Name>rtmp-sharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Riot\platform\summoner\runes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

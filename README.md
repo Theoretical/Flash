@@ -1,0 +1,1 @@
+League of Legends RTMP extension for RTMP# by astralfoxy.
